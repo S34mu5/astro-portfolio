@@ -91,13 +91,6 @@
         </form>
       </div>
     </div>
-
-    <!-- Legal / Footer -->
-    <div class="legal-footer reveal reveal-delay-4">
-      <button type="button" class="legal-link magnetic" id="btn-terms">Terms of Endurance</button>
-      <button type="button" class="legal-link magnetic" id="btn-privacy">Data Avoidance Policy</button>
-      <button type="button" class="legal-link magnetic" id="btn-refund">Transactional Regret</button>
-    </div>
   </div>
 </section>
 
@@ -301,37 +294,6 @@
       grid-template-columns: 1fr;
       gap: var(--space-lg);
     }
-
-    .legal-footer {
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-    }
-  }
-
-  /* Legal Footer */
-  .legal-footer {
-    margin-top: var(--space-xl);
-    padding-top: var(--space-md);
-    border-top: 1px solid var(--border);
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-    flex-wrap: wrap;
-  }
-
-  .legal-link {
-    font-family: var(--font-mono);
-    font-size: 0.7rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--text-muted);
-    transition: color var(--duration-normal) var(--ease-out);
-  }
-
-  .legal-link:hover {
-    color: var(--accent);
-    text-decoration: line-through; /* Strikethrough because nothing matters */
   }
 </style>
 
@@ -353,18 +315,5 @@
       if (btn) btn.textContent = "Execute Request";
       form.reset();
     }, 2500);
-  });
-
-  // Legal Policies (Native alerts because UI modals require effort and I refuse to build them)
-  document.getElementById("btn-terms")?.addEventListener("click", () => {
-    alert("TERMS OF ENDURANCE\n\nBy accessing this domain, you acknowledge that nothing here is guaranteed. This server is sustained entirely by the same volatile mixture of espresso and anxiety that I am.\n\n1. Uptime: I reserve the right to completely nuke this deployment without warning if the repository structure begins to visually displease me or if I experience a depressive episode.\n2. Usage: Do not attempt to reverse-engineer my code. Not because it is proprietary, but because it is structurally dependent on my specific neuroses and will break if exposed to standard logic.\n3. Expectations: If you find a bug, keep it to yourself.");
-  });
-
-  document.getElementById("btn-privacy")?.addEventListener("click", () => {
-    alert("DATA AVOIDANCE POLICY\n\nI do not want your data. I do not use Google Analytics or tracking cookies because the thought of perceiving human traffic in real-time induces panic.\n\nIf you are foolish enough to submit the contact form, your exact string literals will be forcefully sanitized and stored in a completely isolated, volume-mapped Docker container. I will not share this data with third parties because that would require speaking to third parties. I will likely never even look at the database.");
-  });
-
-  document.getElementById("btn-refund")?.addEventListener("click", () => {
-    alert("TRANSACTIONAL REGRET POLICY\n\nI do not actively sell products here, making the concept of a refund completely illogical.\n\nIf you have somehow managed to inject money into my infrastructure, you have exploited a vulnerability that does not exist. Consider those funds a forced donation to my caffeine dependency. I will not reverse the transaction, primarily because logging into the payment processor's dashboard requires 2FA and I refuse to look for my phone. All interactions are final.");
   });
 </script>

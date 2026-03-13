@@ -1,4 +1,5 @@
 ---
+
 ---
 
 <footer class="footer">
@@ -6,21 +7,29 @@
     <div class="footer-top">
       <div class="footer-brand">
         <span class="footer-logo">JV</span>
-        <span class="footer-tagline">Full-Stack Developer</span>
+        <span class="footer-tagline">Backend Isolationist</span>
       </div>
 
       <div class="footer-links">
-        <button class="footer-link" data-modal="terms">Terms</button>
-        <button class="footer-link" data-modal="privacy">Privacy</button>
-        <button class="footer-link" data-modal="refund">Refund Policy</button>
+        <button class="footer-link" data-modal="terms"
+          >Terms of Endurance</button
+        >
+        <button class="footer-link" data-modal="privacy"
+          >Data Avoidance Policy</button
+        >
+        <button class="footer-link" data-modal="refund"
+          >Transactional Regret</button
+        >
       </div>
     </div>
 
     <div class="footer-line"></div>
 
     <div class="footer-bottom">
-      <span class="footer-copy">© 2026 Jaime Villalba. All rights reserved.</span>
-      <span class="footer-built">Crafted with intention</span>
+      <span class="footer-copy"
+        >© 2026 Jaime Villalba. All rights reserved.</span
+      >
+      <span class="footer-built">Crafted with severe anxiety</span>
     </div>
   </div>
 </footer>
@@ -30,23 +39,55 @@
   <div class="modal">
     <button class="modal-close" aria-label="Close">
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-        <path d="M5 5l10 10M15 5L5 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <path
+          d="M5 5l10 10M15 5L5 15"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"></path>
       </svg>
     </button>
 
     <div class="modal-content" id="modal-terms">
-      <h3>Terms and Conditions</h3>
-      <p>Welcome to my portfolio website. By accessing this website, you agree to comply with these terms. This website is provided for informational purposes about my professional services. All content, including text, graphics, and code samples, is my intellectual property unless otherwise noted. Use of this website is at your own risk, and I make no warranties regarding accuracy or availability of content.</p>
+      <h3>Terms of Endurance</h3>
+      <p>
+        By accessing this domain, you acknowledge that nothing here is
+        guaranteed. This server is sustained entirely by the same volatile
+        mixture of espresso and anxiety that I am.<br /><br />1. <strong
+          >Uptime:</strong
+        > I reserve the right to completely nuke this deployment without warning if
+        the repository structure begins to visually displease me or if I experience
+        a depressive episode.<br />2. <strong>Usage:</strong> Do not attempt to reverse-engineer
+        my code. Not because it is proprietary, but because it is structurally dependent
+        on my specific neuroses and will break if exposed to standard logic.<br
+        />3. <strong>Expectations:</strong> If you find a bug, keep it to yourself.
+      </p>
     </div>
 
     <div class="modal-content" id="modal-privacy">
-      <h3>Privacy Policy</h3>
-      <p>I respect your privacy. The contact form collects your name and email address solely for the purpose of responding to your inquiries. This information is not shared with third parties, stored in databases, or used for marketing purposes. No cookies or tracking technologies are used on this website beyond what is necessary for basic functionality.</p>
+      <h3>Data Avoidance Policy</h3>
+      <p>
+        I do not want your data. I do not use Google Analytics or tracking
+        cookies because the thought of perceiving human traffic in real-time
+        induces panic.<br /><br />If you are foolish enough to submit the
+        contact form, your exact string literals will be forcefully sanitized
+        and stored in a completely isolated, volume-mapped Docker container. I
+        will not share this data with third parties because that would require
+        speaking to third parties. I will likely never even look at the
+        database.
+      </p>
     </div>
 
     <div class="modal-content" id="modal-refund">
-      <h3>Refund Policy</h3>
-      <p>If you have engaged my professional services and are not satisfied, you may request a refund within 14 days of the service agreement. Each refund request is evaluated on a case-by-case basis. Please reach out through the contact form to initiate a refund request, providing details about the service and reason for the request.</p>
+      <h3>Transactional Regret</h3>
+      <p>
+        I do not actively sell products here, making the concept of a refund
+        completely illogical.<br /><br />If you have somehow managed to inject
+        money into my infrastructure, you have exploited a vulnerability that
+        does not exist. Consider those funds a forced donation to my caffeine
+        dependency. I will not reverse the transaction, primarily because
+        logging into the payment processor's dashboard requires 2FA and I refuse
+        to look for my phone. All interactions are final.
+      </p>
     </div>
   </div>
 </div>
@@ -218,25 +259,27 @@
 </style>
 
 <script>
-  const overlay = document.getElementById('modal-overlay');
-  const contents = document.querySelectorAll('.modal-content');
-  const closeBtn = document.querySelector('.modal-close');
+  const overlay = document.getElementById("modal-overlay");
+  const contents = document.querySelectorAll(".modal-content");
+  const closeBtn = document.querySelector(".modal-close");
 
-  document.querySelectorAll('.footer-link[data-modal]').forEach((btn) => {
-    btn.addEventListener('click', () => {
-      const id = btn.getAttribute('data-modal');
-      contents.forEach((c) => c.classList.remove('active'));
-      document.getElementById(`modal-${id}`)?.classList.add('active');
-      overlay?.classList.add('active');
+  document.querySelectorAll(".footer-link[data-modal]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const id = btn.getAttribute("data-modal");
+      contents.forEach((c) => c.classList.remove("active"));
+      document.getElementById(`modal-${id}`)?.classList.add("active");
+      overlay?.classList.add("active");
     });
   });
 
-  closeBtn?.addEventListener('click', () => overlay?.classList.remove('active'));
-  overlay?.addEventListener('click', (e) => {
-    if (e.target === overlay) overlay.classList.remove('active');
+  closeBtn?.addEventListener("click", () =>
+    overlay?.classList.remove("active"),
+  );
+  overlay?.addEventListener("click", (e) => {
+    if (e.target === overlay) overlay.classList.remove("active");
   });
 
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') overlay?.classList.remove('active');
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") overlay?.classList.remove("active");
   });
 </script>
