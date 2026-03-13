@@ -3,7 +3,7 @@ const projects = [
   {
     num: "01",
     title: "Tidy Logger",
-    image: "/img/tidyIcon.PNG",
+    image: `${import.meta.env.BASE_URL}img/tidyIcon.PNG`,
     tags: ["Obsessive Scraping", "Compulsive Automation", "Unstyled Output"],
     description:
       "Humans at an airline ground station in Oslo are incapable of remembering flight information beyond a 16-hour window. To prevent my own anxiety about data loss, this headless app frantically scrapes their website every 3 minutes, hoarding the data into rigid PDF/HTML files. No data is lost. Nothing escapes.",
@@ -13,7 +13,7 @@ const projects = [
     num: "02",
     title: "Flight Monitor",
     subtitle: "mini-DCS",
-    image: "/img/Fm.png",
+    image: `${import.meta.env.BASE_URL}img/Fm.png`,
     tags: ["Involuntary Integration", "Logistics Nightmare", "Real-time Panic"],
     description:
       "A provisional DCS I was forced to build for an airline expanding in Oslo. Because they wouldn't pay for enterprise tools, I glued together free APIs to manage their chaotic logistics and ground equipment. It functions perfectly, but I resent its existence.",
