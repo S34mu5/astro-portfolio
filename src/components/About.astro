@@ -1,92 +1,138 @@
 ---
 const technologies = [
-  { name: 'Java', icon: 'java', desc: 'Core Language' },
-  { name: 'MySQL', icon: 'database', desc: 'Data Layer' },
-  { name: 'Docker', icon: 'docker', desc: 'Containerization' },
-  { name: 'Git', icon: 'git', desc: 'Version Control' },
+  {
+    name: "Java (Strictly Typed)",
+    icon: "java",
+    desc: "Verbose Coping Mechanism",
+  },
+  {
+    name: "MySQL (InnoDB)",
+    icon: "database",
+    desc: "Relational Trauma Storage",
+  },
+  {
+    name: "Docker (Daemon)",
+    icon: "docker",
+    desc: "Emotional Containerization",
+  },
+  { name: "Git (CLI Only)", icon: "git", desc: "Rewriting Personal History" },
 ];
 ---
 
 <section id="about" class="about section">
   <div class="about-inner section-inner">
     <div class="about-grid">
-      <!-- Left column -->
+      <!-- Left column (Logical Structure A) -->
       <div class="about-left">
         <div class="section-label reveal">
-          <span>About</span>
+          <span>Clinical Overview</span>
         </div>
 
         <h2 class="about-title reveal reveal-delay-1">
-          Crafting digital
-          <em>solutions</em> with
-          precision
+          Hyperfocusing on
+          <em>code</em> nobody will ever see
         </h2>
       </div>
 
-      <!-- Right column -->
+      <!-- Right column (Over-explaining my condition) -->
       <div class="about-right">
         <p class="about-text reveal reveal-delay-2">
-          My favorite part of programming is the problem-solving aspect. I love the
-          sense of accomplishment when solving a challenging problem. My core stack
-          is Java and MySQL. I am also familiar with Docker and Git, which I use to
-          build scalable and efficient solutions.
+          My favorite part of programming is that machines follow exact, literal
+          instructions and do not require eye contact or small talk. I am
+          currently functioning on 800mg of caffeine and the fleeting dopamine
+          of a clean build. My therapist suggested I find healthy outlets for my
+          PTSD, so instead I spend 14 hours a day writing excessively complex
+          Java microservices for projects with precisely zero active users.
         </p>
 
         <p class="about-text reveal reveal-delay-3">
-          I am always eager to explore and learn new technologies. Every project is
-          an opportunity to push boundaries and deliver something meaningful.
+          I use Docker because the concept of isolating everything in rigid,
+          self-contained environments resonates with me on a deeply personal
+          level. Most days I am trapped in a depressive episode, but at least my
+          Git commits are perfectly formatted. Please do not ask me to build a
+          UI.
         </p>
       </div>
     </div>
 
-    <!-- Tech Stack -->
+    <!-- Tech Stack (The only things that make sense) -->
     <div class="about-tech reveal reveal-delay-3">
       <div class="about-tech-header">
-        <span class="about-tech-label">Tech Stack</span>
+        <span class="about-tech-label">Obsessive Interests (Stack)</span>
         <div class="about-tech-line"></div>
       </div>
 
       <div class="about-tech-grid">
-        {technologies.map((tech, i) => (
-          <div class={`about-tech-item reveal reveal-delay-${i + 1}`}>
-            <div class="about-tech-icon">
-              {tech.icon === 'java' && (
-                <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
-                  <path d="M8.851 18.56s-.917.534.653.714c1.902.218 2.874.187 4.969-.211 0 0 .552.346 1.321.646-4.699 2.013-10.633-.118-6.943-1.149M8.276 15.933s-1.028.761.542.924c2.032.209 3.636.227 6.413-.308 0 0 .384.389.987.602-5.679 1.661-12.007.13-7.942-1.218M13.116 11.475c1.158 1.333-.304 2.533-.304 2.533s2.939-1.518 1.589-3.418c-1.261-1.772-2.228-2.652 3.007-5.688 0 0-8.216 2.051-4.292 6.573M19.33 20.504s.679.559-.747.991c-2.712.822-11.288 1.069-13.669.033-.856-.373.75-.89 1.254-.998.527-.114.828-.093.828-.093-.953-.671-6.156 1.317-2.643 1.887 9.58 1.553 17.462-.7 14.977-1.82M9.292 13.21s-4.362 1.036-1.544 1.412c1.189.159 3.561.123 5.77-.062 1.806-.152 3.618-.477 3.618-.477s-.637.272-1.098.587c-4.429 1.165-12.986.623-10.522-.569 2.082-1.006 3.776-.891 3.776-.891M17.116 17.584c4.503-2.34 2.421-4.589.968-4.285-.356.074-.515.138-.515.138s.132-.207.385-.297c2.875-1.011 5.086 2.981-.929 4.562 0 0 .07-.062.091-.118M14.401 0s2.494 2.494-2.365 6.33c-3.896 3.077-.889 4.832 0 6.836-2.274-2.053-3.943-3.858-2.824-5.539 1.644-2.469 6.197-3.665 5.189-7.627"/>
-                </svg>
-              )}
-              {tech.icon === 'database' && (
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28">
-                  <ellipse cx="12" cy="5" rx="9" ry="3"/>
-                  <path d="M21 12c0 1.66-4.03 3-9 3s-9-1.34-9-3"/>
-                  <path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/>
-                </svg>
-              )}
-              {tech.icon === 'docker' && (
-                <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
-                  <path d="M13.983 11.078h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.185v1.888c0 .102.083.185.185.185m-2.954-5.43h2.118a.186.186 0 00.186-.186V3.574a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.186m0 2.716h2.118a.187.187 0 00.186-.186V6.29a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.887c0 .102.082.186.185.186m-2.93 0h2.12a.186.186 0 00.184-.186V6.29a.185.185 0 00-.185-.185H8.1a.185.185 0 00-.185.185v1.887c0 .102.083.186.185.186m-2.964 0h2.119a.186.186 0 00.185-.186V6.29a.186.186 0 00-.185-.185H5.136a.186.186 0 00-.186.185v1.887c0 .102.084.186.186.186m5.893 2.715h2.118a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.184.185v1.888c0 .102.083.185.185.185m-2.964 0h2.119a.185.185 0 00.185-.185V9.006a.186.186 0 00-.185-.186H5.136a.186.186 0 00-.186.186v1.887c0 .102.084.185.186.185m-2.92 0h2.12a.185.185 0 00.184-.185V9.006a.186.186 0 00-.184-.186h-2.12a.185.185 0 00-.184.185v1.888c0 .102.082.185.185.185M23.763 9.89c-.065-.051-.672-.51-1.954-.51-.338.001-.676.03-1.01.087-.248-1.7-1.653-2.53-1.716-2.566l-.344-.199-.226.327c-.284.438-.49.922-.612 1.43-.23.97-.09 1.882.403 2.661-.595.332-1.55.413-1.744.42H.751a.751.751 0 00-.75.748 11.687 11.687 0 00.692 4.062c.545 1.428 1.355 2.48 2.41 3.124 1.18.723 3.1 1.137 5.275 1.137.983.003 1.963-.086 2.93-.266a12.228 12.228 0 003.823-1.389c.98-.567 1.86-1.288 2.61-2.136 1.252-1.418 1.998-2.997 2.553-4.4h.221c1.372 0 2.215-.549 2.68-1.009.309-.293.55-.65.707-1.046l.098-.288Z"/>
-                </svg>
-              )}
-              {tech.icon === 'git' && (
-                <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
-                  <path d="M23.546 10.93L13.067.452c-.604-.603-1.582-.603-2.188 0L8.708 2.627l2.76 2.76c.645-.215 1.379-.07 1.889.441.516.515.658 1.258.438 1.9l2.66 2.66c.645-.222 1.387-.078 1.9.435.721.72.721 1.884 0 2.604-.719.719-1.881.719-2.6 0-.539-.541-.674-1.337-.404-1.996L12.86 8.955v6.525c.176.086.342.203.488.348.713.721.713 1.883 0 2.6-.719.721-1.889.721-2.609 0-.719-.719-.719-1.879 0-2.598.182-.18.387-.316.605-.406V8.835c-.217-.091-.424-.222-.6-.401-.545-.545-.676-1.342-.396-2.009L7.636 3.7.45 10.881c-.6.605-.6 1.584 0 2.189l10.48 10.477c.604.604 1.582.604 2.186 0l10.43-10.43c.605-.603.605-1.582 0-2.187"/>
-                </svg>
-              )}
+        {
+          technologies.map((tech, i) => (
+            <div class={`about-tech-item reveal reveal-delay-${i + 1}`}>
+              <div class="about-tech-icon">
+                {tech.icon === "java" && (
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    width="28"
+                    height="28"
+                  >
+                    <path d="M8.851 18.56s-.917.534.653.714c1.902.218 2.874.187 4.969-.211 0 0 .552.346 1.321.646-4.699 2.013-10.633-.118-6.943-1.149M8.276 15.933s-1.028.761.542.924c2.032.209 3.636.227 6.413-.308 0 0 .384.389.987.602-5.679 1.661-12.007.13-7.942-1.218M13.116 11.475c1.158 1.333-.304 2.533-.304 2.533s2.939-1.518 1.589-3.418c-1.261-1.772-2.228-2.652 3.007-5.688 0 0-8.216 2.051-4.292 6.573M19.33 20.504s.679.559-.747.991c-2.712.822-11.288 1.069-13.669.033-.856-.373.75-.89 1.254-.998.527-.114.828-.093.828-.093-.953-.671-6.156 1.317-2.643 1.887 9.58 1.553 17.462-.7 14.977-1.82M9.292 13.21s-4.362 1.036-1.544 1.412c1.189.159 3.561.123 5.77-.062 1.806-.152 3.618-.477 3.618-.477s-.637.272-1.098.587c-4.429 1.165-12.986.623-10.522-.569 2.082-1.006 3.776-.891 3.776-.891M17.116 17.584c4.503-2.34 2.421-4.589.968-4.285-.356.074-.515.138-.515.138s.132-.207.385-.297c2.875-1.011 5.086 2.981-.929 4.562 0 0 .07-.062.091-.118M14.401 0s2.494 2.494-2.365 6.33c-3.896 3.077-.889 4.832 0 6.836-2.274-2.053-3.943-3.858-2.824-5.539 1.644-2.469 6.197-3.665 5.189-7.627" />
+                  </svg>
+                )}
+                {tech.icon === "database" && (
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    width="28"
+                    height="28"
+                  >
+                    <ellipse cx="12" cy="5" rx="9" ry="3" />
+                    <path d="M21 12c0 1.66-4.03 3-9 3s-9-1.34-9-3" />
+                    <path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5" />
+                  </svg>
+                )}
+                {tech.icon === "docker" && (
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    width="28"
+                    height="28"
+                  >
+                    <path d="M13.983 11.078h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.185v1.888c0 .102.083.185.185.185m-2.954-5.43h2.118a.186.186 0 00.186-.186V3.574a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.186m0 2.716h2.118a.187.187 0 00.186-.186V6.29a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.887c0 .102.082.186.185.186m-2.93 0h2.12a.186.186 0 00.184-.186V6.29a.185.185 0 00-.185-.185H8.1a.185.185 0 00-.185.185v1.887c0 .102.083.186.185.186m-2.964 0h2.119a.186.186 0 00.185-.186V6.29a.186.186 0 00-.185-.185H5.136a.186.186 0 00-.186.185v1.887c0 .102.084.186.186.186m5.893 2.715h2.118a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.184.185v1.888c0 .102.083.185.185.185m-2.964 0h2.119a.185.185 0 00.185-.185V9.006a.186.186 0 00-.185-.186H5.136a.186.186 0 00-.186.186v1.887c0 .102.084.185.186.185m-2.92 0h2.12a.185.185 0 00.184-.185V9.006a.186.186 0 00-.184-.186h-2.12a.185.185 0 00-.184.185v1.888c0 .102.082.185.185.185M23.763 9.89c-.065-.051-.672-.51-1.954-.51-.338.001-.676.03-1.01.087-.248-1.7-1.653-2.53-1.716-2.566l-.344-.199-.226.327c-.284.438-.49.922-.612 1.43-.23.97-.09 1.882.403 2.661-.595.332-1.55.413-1.744.42H.751a.751.751 0 00-.75.748 11.687 11.687 0 00.692 4.062c.545 1.428 1.355 2.48 2.41 3.124 1.18.723 3.1 1.137 5.275 1.137.983.003 1.963-.086 2.93-.266a12.228 12.228 0 003.823-1.389c.98-.567 1.86-1.288 2.61-2.136 1.252-1.418 1.998-2.997 2.553-4.4h.221c1.372 0 2.215-.549 2.68-1.009.309-.293.55-.65.707-1.046l.098-.288Z" />
+                  </svg>
+                )}
+                {tech.icon === "git" && (
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    width="28"
+                    height="28"
+                  >
+                    <path d="M23.546 10.93L13.067.452c-.604-.603-1.582-.603-2.188 0L8.708 2.627l2.76 2.76c.645-.215 1.379-.07 1.889.441.516.515.658 1.258.438 1.9l2.66 2.66c.645-.222 1.387-.078 1.9.435.721.72.721 1.884 0 2.604-.719.719-1.881.719-2.6 0-.539-.541-.674-1.337-.404-1.996L12.86 8.955v6.525c.176.086.342.203.488.348.713.721.713 1.883 0 2.6-.719.721-1.889.721-2.609 0-.719-.719-.719-1.879 0-2.598.182-.18.387-.316.605-.406V8.835c-.217-.091-.424-.222-.6-.401-.545-.545-.676-1.342-.396-2.009L7.636 3.7.45 10.881c-.6.605-.6 1.584 0 2.189l10.48 10.477c.604.604 1.582.604 2.186 0l10.43-10.43c.605-.603.605-1.582 0-2.187" />
+                  </svg>
+                )}
+              </div>
+              <div class="about-tech-info">
+                <span class="about-tech-name">{tech.name}</span>
+                <span class="about-tech-desc">{tech.desc}</span>
+              </div>
             </div>
-            <div class="about-tech-info">
-              <span class="about-tech-name">{tech.name}</span>
-              <span class="about-tech-desc">{tech.desc}</span>
-            </div>
-          </div>
-        ))}
+          ))
+        }
       </div>
     </div>
   </div>
 
-  <!-- Decorative -->
+  <!-- Decorative (Useless visual stimuli required by neurotypicals) -->
   <div class="about-deco" aria-hidden="true">
     <svg width="300" height="300" viewBox="0 0 300 300" fill="none">
-      <circle cx="150" cy="150" r="149" stroke="var(--accent-dim)" stroke-width="0.5" stroke-dasharray="4 8"/>
+      <circle
+        cx="150"
+        cy="150"
+        r="149"
+        stroke="var(--accent-dim)"
+        stroke-width="0.5"
+        stroke-dasharray="4 8"></circle>
     </svg>
   </div>
 </section>
@@ -124,7 +170,7 @@ const technologies = [
     margin-bottom: var(--space-sm);
   }
 
-  /* Tech */
+  /* Tech (Obsession formatting rules) */
   .about-tech-header {
     display: flex;
     align-items: center;
@@ -167,7 +213,7 @@ const technologies = [
   }
 
   .about-tech-item::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -189,8 +235,9 @@ const technologies = [
 
   .about-tech-icon {
     color: var(--accent);
-    transition: transform var(--duration-normal) var(--ease-out),
-                color var(--duration-normal) var(--ease-out);
+    transition:
+      transform var(--duration-normal) var(--ease-out),
+      color var(--duration-normal) var(--ease-out);
   }
 
   .about-tech-item:hover .about-tech-icon {
@@ -218,7 +265,7 @@ const technologies = [
     letter-spacing: 0.05em;
   }
 
-  /* Decorative */
+  /* Decorative (Spinning endlessly like my intrusive thoughts) */
   .about-deco {
     position: absolute;
     top: -100px;
@@ -228,7 +275,9 @@ const technologies = [
   }
 
   @keyframes spin-slow {
-    to { transform: rotate(360deg); }
+    to {
+      transform: rotate(360deg);
+    }
   }
 
   @media (max-width: 900px) {

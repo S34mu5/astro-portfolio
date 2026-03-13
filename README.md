@@ -1,4 +1,4 @@
-# Astro Starter Kit: Minimal
+# Astro Starter Kit: Minimal (Like My Will to Live)
 
 ```sh
 npm create astro@latest -- --template minimal
