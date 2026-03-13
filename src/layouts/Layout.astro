@@ -18,8 +18,8 @@ const {
   <meta name="description" content={description} />
   <meta name="keywords" content="Portfolio, Full-Stack Developer, Java, MySQL, Docker, Git, Software Development" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link href="https://fonts.cdnfonts.com/css/ocr-a-std" rel="stylesheet" />
   <title>{title}</title>
+  <style is:global set:html={`@font-face{font-family:"OCR A Std";font-style:normal;font-weight:400;font-display:swap;src:url("${import.meta.env.BASE_URL}fonts/OCRAStd.woff") format("woff")}`} />
 </head>
 <body>
   <slot />
