@@ -1,0 +1,242 @@
+---
+---
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="footer-logo">JV</span>
+        <span class="footer-tagline">Full-Stack Developer</span>
+      </div>
+
+      <div class="footer-links">
+        <button class="footer-link" data-modal="terms">Terms</button>
+        <button class="footer-link" data-modal="privacy">Privacy</button>
+        <button class="footer-link" data-modal="refund">Refund Policy</button>
+      </div>
+    </div>
+
+    <div class="footer-line"></div>
+
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Jaime Villalba. All rights reserved.</span>
+      <span class="footer-built">Crafted with intention</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Policy Modals -->
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal">
+    <button class="modal-close" aria-label="Close">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <path d="M5 5l10 10M15 5L5 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+    </button>
+
+    <div class="modal-content" id="modal-terms">
+      <h3>Terms and Conditions</h3>
+      <p>Welcome to my portfolio website. By accessing this website, you agree to comply with these terms. This website is provided for informational purposes about my professional services. All content, including text, graphics, and code samples, is my intellectual property unless otherwise noted. Use of this website is at your own risk, and I make no warranties regarding accuracy or availability of content.</p>
+    </div>
+
+    <div class="modal-content" id="modal-privacy">
+      <h3>Privacy Policy</h3>
+      <p>I respect your privacy. The contact form collects your name and email address solely for the purpose of responding to your inquiries. This information is not shared with third parties, stored in databases, or used for marketing purposes. No cookies or tracking technologies are used on this website beyond what is necessary for basic functionality.</p>
+    </div>
+
+    <div class="modal-content" id="modal-refund">
+      <h3>Refund Policy</h3>
+      <p>If you have engaged my professional services and are not satisfied, you may request a refund within 14 days of the service agreement. Each refund request is evaluated on a case-by-case basis. Please reach out through the contact form to initiate a refund request, providing details about the service and reason for the request.</p>
+    </div>
+  </div>
+</div>
+
+<style>
+  .footer {
+    padding: var(--space-lg) var(--gutter);
+    padding-left: calc(220px + var(--gutter));
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+  }
+
+  .footer-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-md);
+  }
+
+  .footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .footer-logo {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+
+  .footer-tagline {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .footer-link {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    transition: color var(--duration-fast);
+  }
+
+  .footer-link:hover {
+    color: var(--accent);
+  }
+
+  .footer-line {
+    height: 1px;
+    background: var(--border);
+    margin-bottom: var(--space-md);
+  }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-copy,
+  .footer-built {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+  }
+
+  /* Modal */
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-md);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--duration-normal) var(--ease-out);
+  }
+
+  .modal-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .modal {
+    background: var(--surface);
+    border: 1px solid var(--accent-dim);
+    padding: var(--space-lg);
+    max-width: 600px;
+    width: 100%;
+    position: relative;
+    transform: translateY(20px);
+    transition: transform var(--duration-normal) var(--ease-out);
+    box-shadow: 0 0 30px rgba(200, 63, 109, 0.1);
+    border-radius: 8px;
+  }
+
+  .modal-overlay.active .modal {
+    transform: translateY(0);
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    color: var(--text-muted);
+    transition: color var(--duration-fast);
+  }
+
+  .modal-close:hover {
+    color: var(--text-primary);
+  }
+
+  .modal-content {
+    display: none;
+  }
+
+  .modal-content.active {
+    display: block;
+  }
+
+  .modal-content h3 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    margin-bottom: var(--space-sm);
+  }
+
+  .modal-content p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.9;
+  }
+
+  @media (max-width: 900px) {
+    .footer {
+      padding-left: var(--gutter);
+    }
+
+    .footer-top {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .footer-bottom {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+  }
+</style>
+
+<script>
+  const overlay = document.getElementById('modal-overlay');
+  const contents = document.querySelectorAll('.modal-content');
+  const closeBtn = document.querySelector('.modal-close');
+
+  document.querySelectorAll('.footer-link[data-modal]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const id = btn.getAttribute('data-modal');
+      contents.forEach((c) => c.classList.remove('active'));
+      document.getElementById(`modal-${id}`)?.classList.add('active');
+      overlay?.classList.add('active');
+    });
+  });
+
+  closeBtn?.addEventListener('click', () => overlay?.classList.remove('active'));
+  overlay?.addEventListener('click', (e) => {
+    if (e.target === overlay) overlay.classList.remove('active');
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') overlay?.classList.remove('active');
+  });
+</script>

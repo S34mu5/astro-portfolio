@@ -1,0 +1,295 @@
+---
+const projects = [
+  {
+    num: '01',
+    title: 'Tidy Logger',
+    image: '/img/tidyIcon.PNG',
+    tags: ['Web Scraping', 'Automation', 'PDF/HTML'],
+    description: 'An airline ground staff uses a web application to check flight arrival information at its main station in Oslo. The client\'s website only shows flights within a 16-hour window. This app scrapes the website every 3 minutes and stores the data in a PDF or HTML file, ensuring no flight information is ever lost.',
+    link: '#',
+  },
+  {
+    num: '02',
+    title: 'Flight Monitor',
+    subtitle: 'mini-DCS',
+    image: '/img/Fm.png',
+    tags: ['API Integration', 'Logistics', 'Real-time'],
+    description: 'A provisional mini-DCS (Departure Control System) built for an airline expanding operations in Oslo. Based on free existing APIs, it covers the most urgent operational needs for managing logistics and ground support equipment, allowing a smoother transition to a full solution.',
+    link: '#',
+  },
+];
+---
+
+<section id="projects" class="projects section">
+  <div class="projects-inner section-inner">
+    <div class="projects-header">
+      <div class="section-label reveal">
+        <span>Selected Work</span>
+      </div>
+
+      <h2 class="projects-title reveal reveal-delay-1">
+        Projects
+      </h2>
+
+      <p class="projects-intro reveal reveal-delay-2">
+        A collection of my favorite projects, showcasing my skills in Java,
+        MySQL, Docker, and more.
+      </p>
+    </div>
+
+    <div class="projects-list">
+      {projects.map((project, i) => (
+        <article class={`project-card reveal reveal-delay-${i + 1}`}>
+          <div class="project-card-top">
+            <span class="project-num">{project.num}</span>
+            <div class="project-tags">
+              {project.tags.map((tag) => (
+                <span class="project-tag">{tag}</span>
+              ))}
+            </div>
+          </div>
+
+          <div class="project-card-body">
+            <div class="project-image-col">
+              <div class="project-image-wrapper">
+                <img src={project.image} alt={project.title} class="project-image" />
+              </div>
+            </div>
+
+            <div class="project-content-col">
+              <h3 class="project-title">
+                {project.title}
+                {project.subtitle && (
+                  <span class="project-subtitle">{project.subtitle}</span>
+                )}
+              </h3>
+
+              <p class="project-desc">{project.description}</p>
+
+              <a href={project.link} class="project-link magnetic">
+                <span>View Project</span>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path d="M5 15L15 5M15 5H8M15 5v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card-line"></div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .projects {
+    padding-left: calc(220px + var(--gutter));
+    background: var(--black);
+  }
+
+  .projects-header {
+    margin-bottom: var(--space-xl);
+  }
+
+  .projects-title {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    margin-bottom: var(--space-sm);
+  }
+
+  .projects-intro {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    max-width: 500px;
+    line-height: 1.8;
+  }
+
+  /* Project Card */
+  .projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .project-card {
+    padding: var(--space-lg) 0;
+    position: relative;
+  }
+
+  .project-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-md);
+  }
+
+  .project-num {
+    font-family: var(--font-display);
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: var(--border-light);
+    line-height: 1;
+  }
+
+  .project-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .project-tag {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    padding: 0.35rem 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: 1px;
+  }
+
+  .project-card-body {
+    display: grid;
+    grid-template-columns: 0.4fr 1fr;
+    gap: var(--space-lg);
+    align-items: start;
+  }
+
+  /* Image */
+  .project-image-wrapper {
+    aspect-ratio: 1;
+    overflow: hidden;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-md);
+    transition: border-color var(--duration-normal) var(--ease-out),
+                box-shadow var(--duration-normal) var(--ease-out);
+  }
+
+  .project-card:hover .project-image-wrapper {
+    border-color: var(--accent);
+    box-shadow: 0 0 20px rgba(200, 63, 109, 0.15);
+  }
+
+  .project-image {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+    filter: brightness(0.9);
+    transition: filter var(--duration-normal) var(--ease-out),
+                transform var(--duration-slow) var(--ease-out);
+  }
+
+  .project-card:hover .project-image {
+    filter: brightness(1);
+    transform: scale(1.05);
+  }
+
+  /* Content */
+  .project-content-col {
+    padding-top: 0.5rem;
+  }
+
+  .project-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    font-weight: 400;
+    margin-bottom: var(--space-sm);
+    line-height: 1.2;
+  }
+
+  .project-subtitle {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+    vertical-align: super;
+    margin-left: 0.5rem;
+  }
+
+  .project-desc {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.85;
+    margin-bottom: var(--space-md);
+    max-width: 600px;
+  }
+
+  .project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--accent);
+    padding: 0.75rem 0;
+    position: relative;
+    transition: gap var(--duration-normal) var(--ease-out);
+  }
+
+  .project-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--accent);
+    transition: width var(--duration-normal) var(--ease-out);
+  }
+
+  .project-link:hover::after {
+    width: calc(100% - 28px);
+  }
+
+  .project-link:hover {
+    gap: 1rem;
+  }
+
+  .project-link svg {
+    transition: transform var(--duration-normal) var(--ease-out);
+  }
+
+  .project-link:hover svg {
+    transform: translate(3px, -3px);
+  }
+
+  /* Bottom line */
+  .project-card-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--border);
+  }
+
+  .project-card:last-child .project-card-line {
+    display: none;
+  }
+
+  @media (max-width: 900px) {
+    .projects {
+      padding-left: var(--gutter);
+    }
+
+    .project-card-body {
+      grid-template-columns: 1fr;
+      gap: var(--space-md);
+    }
+
+    .project-image-wrapper {
+      max-width: 200px;
+    }
+
+    .project-num {
+      font-size: 2.5rem;
+    }
+  }
+</style>
